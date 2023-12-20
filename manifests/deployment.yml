@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: shakirpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: shakirpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: shakirpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: shakirpipelinesjavascriptdocker 
+          image: myaksdemolabcluster.azurecr.io/shakirpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
